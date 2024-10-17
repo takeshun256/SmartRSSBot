@@ -8,6 +8,7 @@ SmartRSSBotは、Discord上でRSSフィードを定期的に取得し、AIを用
 
 AIにはOpenAIのGPT-4oを使用し、記事の取得と関連度評価と質問応答には簡易的なRAG（Retrieval-Augmented Generation）を使用しています。
 
+![ai_eval](image.png)
 
 # Requirements
 
