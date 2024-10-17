@@ -1,9 +1,9 @@
 # SmartRSSBot
-SmartRSSBotは、Discord上でRSSフィードを定期的に取得し、AIを用いて記事の関連度を評価するボットです。ユーザーは新しい記事の通知を受け取り、AIによるユーザーの趣向との関連度の評価結果を確認することができます。
+SmartRSSBotは、Discord上でRSSフィードを定期的に取得し、AIを用いて記事の関連度を評価するDiscordボットです。ユーザーは新しい記事の通知を受け取り、AIによるユーザーの趣向との関連度の評価結果を確認することができます。
 
 # Features
 - RSSフィードの定期取得：指定したRSSフィードを5分間隔で定期的に取得し、新しい記事があればDiscordチャンネルへ通知します。
-- 記事の関連度評価：記事の本文をAIによって解析し、ユーザーの趣向との関連度を評価します。
+- 記事の関連度評価：記事の本文をAIによって解析し、ユーザーの趣向との関連度を3段階で評価します。
 - 質問応答：記事の本文をAIによって解析し、指定した質問に対する回答を生成します。
 
 AIにはOpenAIのGPT-4oを使用し、記事の取得と関連度評価と質問応答には簡易的なRAG（Retrieval-Augmented Generation）を使用しています。
@@ -14,7 +14,7 @@ AIにはOpenAIのGPT-4oを使用し、記事の取得と関連度評価と質問
 
 # Requirements
 
-- Python 3.8
+- Python 3.8^
 - Discord Bot Token
   - 参考: [Discord.py Botアカウント作成](https://discordpy.readthedocs.io/ja/latest/discord.html)
 - OpenAI API Key
