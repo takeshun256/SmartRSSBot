@@ -31,15 +31,15 @@ pip install .
 `.env.sample` を参考に、`.env` ファイルを作成し、環境変数を設定してください。
 ```
 # BOT TOKEN
-DISCORD_BOT_TOKEN=<Requirementsで用意したDiscord Bot Token>
+DISCORD_BOT_TOKEN=<Discord Bot Token>
 # API KEY
-OPENAI_API_KEY=<Requirementsで用意したOpenAI API Key>
+OPENAI_API_KEY=<OpenAI API Key>
 # ID
-DISCORD_GUILD_ID=<BOTを作成したギルドID>
+DISCORD_GUILD_ID=<BOTを追加したギルドID>
 DISCORD_CHANNEL_ID=<BOTのメッセージを送信させるチャンネルID>
 # FEED
 RSS_FEED_URL="<RSSを定期的に受け取りたいRSSフィード>"
-DESIRED_ARTICLE_STRING="<どのような記事を受け取りたいか？例: Python、特にLangChain>"
+DESIRED_ARTICLE_STRING="<どのような記事を受け取りたいか？例:'Python、特にLangChainの記事'>"
 ```
 
 3. ボットの起動
@@ -48,6 +48,7 @@ python smartrssbot/bot.py
 ```
 
 4. ボットのコマンド
-- `/rss` : 最新のRSSフィードを取得し、前回のフィードと比較して新しい記事があれば.envで指定したチャンネルへメッセージを送信します。
-- `/eval <url>`: 指定したURLの記事の関連度を評価します。
+- `/rss` : 最新のRSSフィードを手動で取得し、前回のフィードと比較して新しい記事があれば.envで指定したチャンネルへメッセージを送信します。（Botが起動中は5分ごとに自動でRSSの更新差分を取得します）
+- `/eval <url>`: 指定したURLの記事に対して、関連度を評価します。
 - `/question <url> <question>`: 指定したURLの記事に対して、指定した質問に対する回答を生成します。
+  - 例: `/question <url> 記事の概要をまとめてください。`
