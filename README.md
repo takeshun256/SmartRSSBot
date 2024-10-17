@@ -20,7 +20,7 @@ AIにはOpenAIのGPT-4oを使用し、記事の取得と関連度評価と質問
 - OpenAI API Key
     - 参考: [OpenAI API Reference](https://platform.openai.com/docs/api-reference/introduction)
 
-# Installation
+# Installation / Usage
 
 1. 依存関係のインストール
 ```bash
